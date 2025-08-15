@@ -5,6 +5,14 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useCartStore } from "@/store/cart-store";
 import { checkoutAction } from "./checkout-action";
 
+export function Head() {
+  return (
+    <>
+      <title>Zephyx | Checkout</title>
+      <meta name="description" content="Proceed to checkout and complete your purchase." />
+    </>
+  );
+}
 export default function CheckoutPage() {
   const { items, removeItem, addItem, clearCart } = useCartStore();
   const total = items.reduce(

@@ -14,3 +14,4 @@ export default async function ProductPage({
   const plainProduct = JSON.parse(JSON.stringify(product));
   return <ProductDetail product={plainProduct} />;
 }
+export const revalidate = 0;

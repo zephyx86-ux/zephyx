@@ -15,3 +15,4 @@ export default async function ProductsPage() {
     </div>
   );
 }
+export const revalidate = 0;

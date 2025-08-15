@@ -1,4 +1,6 @@
-export const metadata = {
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
   title: 'Zephyx | Home',
   description: 'Welcome to Zephyx, discover the latest products.'
 };
@@ -12,7 +14,7 @@ export default async function Home() {
   const products = await stripe.products.list({
     expand: ["data.default_price"],
     limit: 5,
-  });
+  }); 
 
   return (
     <div>
